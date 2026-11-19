@@ -1,49 +1,38 @@
-/* ==========================================================================
-   المشروع: قالب ليون - Leon Creative Agency Template
-   الوصف: ملف التنسيقات الرئيسي (CSS)
-   المطور: Front-End Web Development
-   ========================================================================== */
+/* ========================================================
+   المشروع: النشاط الأول - تصميم صفحة ويب بسيطة (Leon)
+   ملف التنسيقات: style.css
+   ======================================================== */
 
-/* --------------------------------------------------------------------------
-   1. المتغيرات العامة (Variables / Custom Properties)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   1. المتغيرات العامة للألوان والمسافات (CSS Variables)
+   -------------------------------------------------------- */
 :root {
-  /* اللون الأساسي المميز للموقع */
-  --main-color: #10cab7;
-  /* اللون الثانوي للعناوين والنصوص الداكنة */
-  --secondary-color: #2c4755;
-  /* لون خلفية الأقسام التبادلية */
-  --section-background: #f6f6f6;
-  /* المسافات العلوية والسفلية القياسية للأقسام */
-  --section-padding: 60px;
-  /* مدة التأثيرات الحركية (Transitions) */
-  --main-transition: 0.3s;
+  --main-color: #10cab7;          /* اللون الأساسي (تركوازي) */
+  --secondary-color: #2c4755;     /* اللون الثانوي (كحلي داكن) */
+  --section-background: #f6f6f6;  /* لون خلفية الأقسام المتبادلة */
+  --section-padding: 60px;        /* الهوامش العلوية والسفلية للأقسام */
 }
 
-/* --------------------------------------------------------------------------
-   2. القواعد العامة للموقع (Global Rules)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   2. القواعد العامة والحاوية (Global Rules & Container)
+   -------------------------------------------------------- */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  /* التمرير السلس عند النقر على روابط القائمة */
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* حركة تمرير ناعمة عند الضغط على الروابط */
 }
 
 body {
-  /* الخط الافتراضي لكامل الموقع */
   font-family: "Work Sans", sans-serif;
   color: #333;
   line-height: 1.6;
 }
 
-/* الحاوية المتجاوبة (Responsive Container) لتحديد العرض حسب الشاشات */
+/* الحاوية لتوسيط وتحديد عرض المحتوى حسب حجم الشاشة */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -51,67 +40,63 @@ body {
   margin-right: auto;
 }
 
-/* الشاشات الصغيرة (Small Devices: الهواتف والأجهزة اللوحية الصغرى) */
+/* شاشات الهواتف والأجهزة اللوحية (Small) */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-/* الشاشات المتوسطة (Medium Devices: الحواسيب المحمولة) */
+/* شاشات الحواسيب العادية (Medium) */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 
-/* الشاشات الكبيرة (Large Devices: شاشات سطح المكتب الكبيرة) */
+/* الشاشات الكبيرة (Large) */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   3. المكونات العامة الموحدة (Global Components)
-   -------------------------------------------------------------------------- */
-/* عنوان القسم المائي الكبير (Watermark Heading) */
+/* --------------------------------------------------------
+   3. العناوين المشتركة للأقسام (Special Heading)
+   -------------------------------------------------------- */
 .special-heading {
   color: #ebeced;
-  font-size: 100px;
+  font-size: 80px;
   text-align: center;
   font-weight: 800;
   letter-spacing: -3px;
   margin: 0;
 }
 
-/* النص التوضيحي الذي يلي العنوان المائي مباشرة */
+/* النص التوضيحي تحت العنوان مباشرة */
 .special-heading + p {
-  margin: -30px 0 0;
-  font-size: 20px;
+  margin: -25px 0 0;
+  font-size: 18px;
   text-align: center;
   color: #797979;
 }
 
-/* تعديل أحجام العناوين عند العرض على الهواتف */
 @media (max-width: 767px) {
   .special-heading {
-    font-size: 60px;
+    font-size: 50px;
   }
   .special-heading + p {
-    margin-top: -20px;
-    font-size: 16px;
+    margin-top: -15px;
+    font-size: 15px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   4. رأس الصفحة والقائمة الرئيسية (Header & Navigation)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   4. ترويسة الموقع والقائمة (Header & Navigation)
+   -------------------------------------------------------- */
 .header {
   padding: 20px 0;
   background-color: #ffffff;
-  position: relative;
-  z-index: 100;
 }
 
 .header .container {
@@ -120,19 +105,24 @@ body {
   align-items: center;
 }
 
-/* شعار الموقع (Logo) */
+/* تنسيق الشعار النصي البسيط */
 .header .logo {
-  width: 70px;
-  height: auto;
-  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  text-decoration: none;
+  letter-spacing: -1px;
 }
 
-/* صندوق روابط القائمة */
+.header .logo span {
+  color: var(--main-color);
+}
+
+/* أيقونة القائمة (Hamburger Menu) */
 .header .links {
   position: relative;
 }
 
-/* أيقونة القائمة (Hamburger Icon) المصممة بـ CSS الخالص */
 .header .links .icon {
   width: 30px;
   display: flex;
@@ -142,10 +132,10 @@ body {
 }
 
 .header .links .icon span {
-  background-color: #333333;
+  background-color: #333;
   margin-bottom: 5px;
   height: 2px;
-  transition: var(--main-transition);
+  transition: 0.3s;
 }
 
 .header .links .icon span:first-child {
@@ -161,28 +151,26 @@ body {
   margin-bottom: 0;
 }
 
-/* حركة توسيع الخط الأوسط عند التحويم فوق الأيقونة */
+/* تطويل الخط الأوسط عند وضع الماوس على الأيقونة */
 .header .links:hover .icon span:nth-child(2) {
   width: 100%;
 }
 
-/* القائمة المنسدلة (Dropdown Menu) */
+/* قائمة الروابط المنسدلة */
 .header .links ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   background-color: #f6f6f6;
   position: absolute;
   right: 0;
-  min-width: 200px;
+  min-width: 180px;
   top: calc(100% + 15px);
   display: none;
-  z-index: 1;
+  z-index: 10;
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* سهم القائمة العلوي باستخدام عنصر وهمي (Pseudo-element) */
+/* سهم القائمة الصغير */
 .header .links ul::before {
   content: "";
   border-width: 10px;
@@ -193,43 +181,42 @@ body {
   top: -20px;
 }
 
-/* إظهار القائمة عند الوقوف عليها بالماوس */
+/* إظهار القائمة عند التحويم */
 .header .links:hover ul {
   display: block;
 }
 
 .header .links ul li a {
   display: block;
-  padding: 15px;
+  padding: 12px 15px;
   text-decoration: none;
-  color: #333333;
-  font-weight: 500;
-  transition: var(--main-transition);
+  color: #333;
+  transition: 0.3s;
 }
 
 .header .links ul li a:hover {
-  padding-left: 25px;
+  padding-left: 20px;
   color: var(--main-color);
 }
 
 .header .links ul li:not(:last-child) a {
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e2e2e2;
 }
 
-/* --------------------------------------------------------------------------
-   5. قسم الترحيب والواجهة الرئيسية (Landing / Hero Section)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   5. قسم اللاندنج (Landing Section)
+   ملاحظة: يستخدم الصورة الوحيدة المرفقة landing.jpg
+   -------------------------------------------------------- */
 .landing {
-  /* ارتفاع كامل الشاشة مخصوماً منه ارتفاع الهيدر */
   height: calc(100vh - 64px);
-  min-height: 500px;
-  background-image: url("../images/landing.jpg");
+  min-height: 450px;
+  background-image: url("../landing.jpg"); /* مسار الصورة المرفقة */
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-/* نص الترحيب المتمركز بدقة في منتصف القسم */
+/* صندوق الترحيب في المنتصف */
 .landing .intro-text {
   position: absolute;
   left: 50%;
@@ -242,23 +229,21 @@ body {
 
 .landing .intro-text h1 {
   margin: 0;
-  font-weight: bold;
-  font-size: 50px;
+  font-weight: 700;
+  font-size: 45px;
   color: var(--main-color);
-  letter-spacing: -1px;
 }
 
 .landing .intro-text p {
-  font-size: 19px;
-  line-height: 1.8;
-  color: #333333;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
   margin-top: 10px;
-  font-weight: 400;
 }
 
-/* --------------------------------------------------------------------------
-   6. قسم المميزات والخصائص (Features Section)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   6. قسم المميزات (Features Section)
+   -------------------------------------------------------- */
 .features {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -268,35 +253,34 @@ body {
 .features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 25px;
+  grid-gap: 20px;
 }
 
-/* بطاقة الميزة الفردية */
 .features .feat {
-  padding: 25px;
+  padding: 20px;
   text-align: center;
 }
 
 .features .feat i {
   color: var(--main-color);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .features .feat h3 {
-  font-weight: 800;
-  margin: 25px 0;
+  font-weight: 700;
+  margin: 15px 0;
   color: var(--secondary-color);
 }
 
 .features .feat p {
-  line-height: 1.8;
-  color: #777777;
+  line-height: 1.7;
+  color: #777;
   font-size: 15px;
 }
 
-/* --------------------------------------------------------------------------
+/* --------------------------------------------------------
    7. قسم الخدمات (Services Section)
-   -------------------------------------------------------------------------- */
+   -------------------------------------------------------- */
 .services {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -306,267 +290,112 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
-/* بطاقة الخدمة الفردية */
-.services .services-content .srv {
+.services .srv {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 767px) {
-  .services .services-content .srv {
+  .services .srv {
     flex-direction: column;
     text-align: center;
   }
 }
 
-.services .services-content .srv i {
+.services .srv i {
   color: var(--main-color);
-  flex-basis: 60px;
+  flex-basis: 50px;
 }
 
 @media (max-width: 767px) {
-  .services .services-content .srv i {
-    margin: 0 0 20px;
+  .services .srv i {
+    margin-bottom: 15px;
   }
 }
 
-.services .services-content .srv .text {
+.services .srv .text {
   flex: 1;
 }
 
-.services .services-content .srv .text h3 {
-  margin: 0 0 15px;
+.services .srv .text h3 {
+  margin-bottom: 10px;
   color: var(--secondary-color);
-  font-weight: 700;
 }
 
-.services .services-content .srv .text p {
-  color: #777777;
-  font-weight: 300;
-  line-height: 1.7;
-  font-size: 15px;
+.services .srv .text p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-/* عمود الصورة التوضيحية لقسم الخدمات */
-.services .services-content .image {
-  text-align: center;
-  position: relative;
-}
-
-.services .services-content .image::before {
-  content: "";
-  background-color: var(--secondary-color);
-  width: 100px;
-  height: calc(100% + 100px);
-  top: -50px;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-}
-
-.services .services-content .image img {
-  width: 260px;
-  border-radius: 4px;
-}
-
-/* إخفاء الصورة في الشاشات الصغيرة لتوفير المساحة */
-@media (max-width: 1199px) {
-  .services .services-content .image-column {
-    display: none;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   8. قسم معرض الأعمال والمشاريع (Portfolio Section)
-   -------------------------------------------------------------------------- */
-.portfolio {
+/* --------------------------------------------------------
+   8. قسم من نحن (About Section)
+   -------------------------------------------------------- */
+.about {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
-}
-
-.portfolio .portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
-  margin-top: 80px;
-}
-
-/* بطاقة المشروع */
-.portfolio .portfolio-content .card {
-  background-color: #ffffff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: var(--main-transition);
-}
-
-.portfolio .portfolio-content .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio .portfolio-content .card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.portfolio .portfolio-content .card .info {
-  padding: 20px;
-}
-
-.portfolio .portfolio-content .card .info h3 {
-  margin: 0;
-  color: var(--secondary-color);
-  font-weight: 700;
-  font-size: 19px;
-}
-
-.portfolio .portfolio-content .card .info p {
-  color: #777777;
-  line-height: 1.6;
-  margin-bottom: 0;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-/* --------------------------------------------------------------------------
-   9. قسم من نحن (About Section)
-   -------------------------------------------------------------------------- */
-.about {
-  padding-top: var(--section-padding);
-  padding-bottom: calc(var(--section-padding) + 60px);
 }
 
 .about .about-content {
-  margin-top: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-@media (max-width: 991px) {
-  .about .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* حاوية صورة قسم من نحن مع عناصر الديكور الخلفية */
-.about .about-content .image {
-  position: relative;
-  width: 250px;
-  height: 375px;
-}
-
-@media (max-width: 991px) {
-  .about .about-content .image {
-    margin: 0 auto 60px;
-  }
-}
-
-.about .about-content .image::before {
-  content: "";
-  position: absolute;
-  background-color: #ebeced;
-  width: 100px;
-  height: calc(100% + 80px);
-  top: -40px;
-  left: -20px;
-  z-index: -1;
-}
-
-.about .about-content .image::after {
-  top: -40px;
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 300px;
-  border-left: 80px solid var(--main-color);
-  border-bottom: 80px solid var(--main-color);
-  z-index: -1;
-  right: -150px;
-}
-
-@media (max-width: 991px) {
-  .about .about-content .image::before,
-  .about .about-content .image::after {
-    display: none;
-  }
-}
-
-.about .about-content .image img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* النصوص التوضيحية لقسم من نحن */
-.about .about-content .text {
-  flex-basis: calc(100% - 500px);
-}
-
-@media (max-width: 991px) {
-  .about .about-content .text {
-    flex-basis: 100%;
-  }
+  margin-top: 50px;
+  text-align: center;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about .about-content .text p:first-of-type {
-  font-weight: bold;
-  line-height: 2;
-  margin-bottom: 50px;
+  font-weight: 600;
+  line-height: 1.8;
   color: var(--secondary-color);
+  margin-bottom: 25px;
 }
 
 .about .about-content .text hr {
-  width: 50%;
+  width: 40%;
   display: inline-block;
-  border-color: var(--main-color);
-  margin-bottom: 50px;
+  border: none;
+  height: 2px;
+  background-color: var(--main-color);
+  margin-bottom: 25px;
 }
 
 .about .about-content .text p:last-of-type {
-  line-height: 2;
-  color: #777777;
+  line-height: 1.8;
+  color: #777;
 }
 
-/* --------------------------------------------------------------------------
-   10. قسم التواصل (Contact Section)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   9. قسم التواصل (Contact Section)
+   -------------------------------------------------------- */
 .contact {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: var(--section-background);
 }
 
 .contact .info {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
   text-align: center;
+  margin-top: 50px;
 }
 
 .contact .info .label {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 800;
   color: var(--secondary-color);
-  letter-spacing: -2px;
   margin-bottom: 15px;
 }
 
 .contact .info .link {
   display: block;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--main-color);
   text-decoration: none;
-  transition: var(--main-transition);
+  transition: 0.3s;
 }
 
 .contact .info .link:hover {
@@ -578,16 +407,16 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  font-size: 16px;
   color: #666;
+  font-size: 15px;
 }
 
 .contact .info .social i {
-  margin-left: 12px;
+  margin-left: 15px;
   color: var(--secondary-color);
-  transition: var(--main-transition);
   cursor: pointer;
   font-size: 18px;
+  transition: 0.3s;
 }
 
 .contact .info .social i:hover {
@@ -597,19 +426,19 @@ body {
 @media (max-width: 767px) {
   .contact .info .label,
   .contact .info .link {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   11. تذييل الصفحة (Footer)
-   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------
+   10. تذييل الصفحة (Footer)
+   -------------------------------------------------------- */
 .footer {
   background-color: var(--secondary-color);
   color: #ffffff;
-  padding: 30px 10px;
+  padding: 25px 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .footer span {

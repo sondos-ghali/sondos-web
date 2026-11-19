@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- ترميز الحروف لدعم جميع اللغات ومنها العربية -->
+    <!-- ترميز الحروف لدعم اللغة العربية والإنجليزية -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- التجاوب مع مختلف أحجام الشاشات والأجهزة الذكية -->
+    <!-- ضبط أبعاد الصفحة لتناسب شاشات الهواتف والأجهزة المختلفة -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leon | Creative Agency Template</title>
+    <title>Leon - Activity 1</title>
 
-    <!-- ملف التنسيق الموحد لإلغاء الفروقات بين المتصفحات (Normalize CSS) -->
+    <!-- ملف التنسيق الموحد لإلغاء الفروقات بين المتصفحات (Normalize) -->
     <link rel="stylesheet" href="css/normalize.css" />
 
-    <!-- ملف التنسيقات الرئيسي الخاص بالقالب (Leon CSS) -->
-    <link rel="stylesheet" href="css/leon.css" />
+    <!-- ملف التنسيقات الرئيسي للمشروع (CSS) -->
+    <link rel="stylesheet" href="css/style.css" />
 
-    <!-- مكتبة الأيقونات الشهيرة (Font Awesome) -->
+    <!-- مكتبة الأيقونات (Font Awesome) لعرض الأيقونات بشكل مرتب وبسيط -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
 
-    <!-- استدعاء خط جوجل وورك سانس (Google Fonts: Work Sans) -->
+    <!-- استدعاء خط Work Sans من خطوط جوجل (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- ================================================================= -->
-    <!-- بداية ترويسة الموقع والقائمة الرئيسية / Start Header & Navigation -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 1. بداية الهيدر (Header): يحتوي على الشعار وقائمة الروابط -->
+    <!-- ======================================================== -->
     <header class="header">
       <div class="container">
-        <!-- شعار الموقع -->
-        <a href="#">
-          <img class="logo" src="images/logo.png" alt="Leon Agency Logo" />
-        </a>
+        <!-- شعار الموقع نصي وبسيط بدون صور إضافية -->
+        <a href="#" class="logo">Leon<span>.</span></a>
 
-        <!-- قائمة الروابط وأيقونة الهامبرغر -->
+        <!-- قائمة الروابط وأيقونة القائمة -->
         <nav class="links">
-          <!-- أيقونة القائمة للشاشات الصغيرة -->
-          <span class="icon" aria-label="Toggle Navigation">
+          <!-- أيقونة الهامبرغر المكونة من 3 خطوط -->
+          <span class="icon">
             <span></span>
             <span></span>
             <span></span>
           </span>
-
-          <!-- روابط التنقل السلس بين أقسام الصفحة -->
+          <!-- روابط التنقل بين أقسام الصفحة -->
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -61,42 +55,40 @@
         </nav>
       </div>
     </header>
-    <!-- نهاية ترويسة الموقع / End Header -->
+    <!-- نهاية الهيدر / End Header -->
 
-    <!-- ================================================================= -->
-    <!-- بداية قسم الترحيب والواجهة الرئيسية / Start Landing Section       -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 2. بداية قسم اللاندنج (Landing): يستخدم الصورة المرفقة landing.jpg -->
+    <!-- ======================================================== -->
     <section class="landing" id="landing">
-      <!-- صندوق النص التعريفي الرئيسي متمركز وسط الصورة -->
+      <!-- صندوق النص الرئيسي المتمركز في وسط الصفحة -->
       <div class="intro-text">
         <h1>Hello There</h1>
         <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
       </div>
     </section>
-    <!-- نهاية قسم الترحيب / End Landing Section -->
+    <!-- نهاية قسم اللاندنج / End Landing Section -->
 
-    <!-- ================================================================= -->
-    <!-- بداية قسم الخصائص والمميزات / Start Features Section              -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 3. بداية قسم المميزات (Features): ثلاث بطاقات للمميزات   -->
+    <!-- ======================================================== -->
     <section class="features" id="features">
       <div class="container">
-        <!-- الميزة الأولى: فكرة المشروع -->
+        <!-- الميزة الأولى: مشاركة الفكرة -->
         <div class="feat">
           <i class="fas fa-magic fa-3x"></i>
           <h3>Tell Us Your Idea</h3>
           <p>
-            Share your creative vision with our team and watch us turn complex
-            concepts into elegant, user-focused digital reality.
+            Share your project idea with us and we will help you make it a real digital product.
           </p>
         </div>
 
-        <!-- الميزة الثانية: التنفيذ الاحترافي -->
+        <!-- الميزة الثانية: تنفيذ العمل -->
         <div class="feat">
           <i class="far fa-gem fa-3x"></i>
           <h3>We Will Do All The Work</h3>
           <p>
-            From wireframing and prototyping to deployment and maintenance, we
-            handle every stage of your project seamlessly.
+            We take care of all design and development steps to deliver high quality results.
           </p>
         </div>
 
@@ -105,83 +97,57 @@
           <i class="fas fa-globe-asia fa-3x"></i>
           <h3>Your Product is Worldwide</h3>
           <p>
-            Build scalable and responsive digital products ready to serve clients
-            and customers across the entire globe without limits.
+            We make sure your website works smoothly for users all over the world.
           </p>
         </div>
       </div>
     </section>
-    <!-- نهاية قسم الخصائص / End Features Section -->
+    <!-- نهاية قسم المميزات / End Features Section -->
 
-    <!-- ================================================================= -->
-    <!-- بداية قسم الخدمات / Start Services Section                        -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 4. بداية قسم الخدمات (Services): يعرض الخدمات الأساسية   -->
+    <!-- ======================================================== -->
     <section class="services" id="services">
       <div class="container">
-        <!-- العنوان المائي الموحد -->
+        <!-- عنوان القسم الموحد -->
         <h2 class="special-heading">Services</h2>
         <p>Don't be busy, be productive</p>
 
-        <!-- محتوى الخدمات مقسم إلى أعمدة وبطاقات -->
+        <!-- شبكة الخدمات -->
         <div class="services-content">
-          <!-- العمود الأول من الخدمات -->
-          <div class="col">
-            <!-- الخدمة الأولى: التصميم الجرافيكي -->
-            <div class="srv">
-              <i class="fas fa-palette fa-2x"></i>
-              <div class="text">
-                <h3>Graphic Design</h3>
-                <p>
-                  Graphic design is the process of visual communication and
-                  problem-solving using typography, photography and illustration.
-                </p>
-              </div>
-            </div>
-
-            <!-- الخدمة الثانية: تصميم واجهات وتجربة المستخدم -->
-            <div class="srv">
-              <i class="fab fa-sketch fa-2x"></i>
-              <div class="text">
-                <h3>UI & UX</h3>
-                <p>
-                  Process of enhancing user satisfaction with a product by
-                  improving usability, accessibility, and delight in the interaction.
-                </p>
-              </div>
+          <!-- الخدمة الأولى: التصميم الجرافيكي -->
+          <div class="srv">
+            <i class="fas fa-palette fa-2x"></i>
+            <div class="text">
+              <h3>Graphic Design</h3>
+              <p>Visual communication and problem-solving through typography and graphics.</p>
             </div>
           </div>
 
-          <!-- العمود الثاني من الخدمات -->
-          <div class="col">
-            <!-- الخدمة الثالثة: تصميم الويب -->
-            <div class="srv">
-              <i class="fas fa-vector-square fa-2x"></i>
-              <div class="text">
-                <h3>Web Design</h3>
-                <p>
-                  Web design encompasses many different skills and disciplines in the
-                  production and maintenance of modern websites.
-                </p>
-              </div>
-            </div>
-
-            <!-- الخدمة الرابعة: تطوير وبرمجة الويب -->
-            <div class="srv">
-              <i class="fas fa-pencil-ruler fa-2x"></i>
-              <div class="text">
-                <h3>Web Development</h3>
-                <p>
-                  Web development is the work involved in building high-performance,
-                  secure websites and web applications.
-                </p>
-              </div>
+          <!-- الخدمة الثانية: تجربة المستخدم والواجهات -->
+          <div class="srv">
+            <i class="fab fa-sketch fa-2x"></i>
+            <div class="text">
+              <h3>UI & UX</h3>
+              <p>Enhancing user experience and making apps and websites easy to use.</p>
             </div>
           </div>
 
-          <!-- العمود الثالث: الصورة الجانبية التوضيحية -->
-          <div class="col">
-            <div class="image image-column">
-              <img src="images/services.jpg" alt="Our Creative Services" />
+          <!-- الخدمة الثالثة: تصميم الويب -->
+          <div class="srv">
+            <i class="fas fa-vector-square fa-2x"></i>
+            <div class="text">
+              <h3>Web Design</h3>
+              <p>Designing modern, responsive and attractive layouts for all screens.</p>
+            </div>
+          </div>
+
+          <!-- الخدمة الرابعة: برمجة وتطوير المواقع -->
+          <div class="srv">
+            <i class="fas fa-pencil-ruler fa-2x"></i>
+            <div class="text">
+              <h3>Web Development</h3>
+              <p>Building clean, fast and responsive websites using modern code standards.</p>
             </div>
           </div>
         </div>
@@ -189,84 +155,25 @@
     </section>
     <!-- نهاية قسم الخدمات / End Services Section -->
 
-    <!-- ================================================================= -->
-    <!-- بداية قسم معرض الأعمال / Start Portfolio Section                  -->
-    <!-- ================================================================= -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <!-- العنوان المائي الموحد -->
-        <h2 class="special-heading">Portfolio</h2>
-        <p>If you do it right, it will last forever.</p>
-
-        <!-- شبكة بطاقات المشاريع المنجزة -->
-        <div class="portfolio-content">
-          <!-- المشروع الأول -->
-          <article class="card">
-            <img src="images/portfolio-1.jpg" alt="Project 1 Showcase" />
-            <div class="info">
-              <h3>Brand Identity Design</h3>
-              <p>
-                Crafting distinct visual identities and cohesive branding guidelines
-                that stand out and inspire trust.
-              </p>
-            </div>
-          </article>
-
-          <!-- المشروع الثاني -->
-          <article class="card">
-            <img src="images/portfolio-2.jpg" alt="Project 2 Showcase" />
-            <div class="info">
-              <h3>Creative Web Platform</h3>
-              <p>
-                Designing ultra-clean, modern web architectures with seamless
-                user journeys and responsive layouts.
-              </p>
-            </div>
-          </article>
-
-          <!-- المشروع الثالث -->
-          <article class="card">
-            <img src="images/portfolio-3.jpg" alt="Project 3 Showcase" />
-            <div class="info">
-              <h3>Mobile Application UX</h3>
-              <p>
-                Building intuitive digital experiences focused on performance,
-                accessibility, and delightful micro-interactions.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- نهاية قسم معرض الأعمال / End Portfolio Section -->
-
-    <!-- ================================================================= -->
-    <!-- بداية قسم من نحن / Start About Section                            -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 5. بداية قسم من نحن (About): نبذة تعريفية عن الفريق      -->
+    <!-- ======================================================== -->
     <section class="about" id="about">
       <div class="container">
-        <!-- العنوان المائي الموحد -->
+        <!-- عنوان القسم الموحد -->
         <h2 class="special-heading">About</h2>
         <p>Less is more work</p>
 
         <div class="about-content">
-          <!-- عمود الصورة مع الزخارف الهندسية الخلفية -->
-          <div class="image">
-            <img src="images/about.jpg" alt="About Leon Agency" />
-          </div>
-
-          <!-- عمود النص التوضيحي -->
           <div class="text">
             <p>
-              We are a passionate collective of digital creators, designers, and
-              developers dedicated to crafting world-class digital experiences.
-              We believe that minimalism and precision produce lasting impact.
+              We are a creative team passionate about simple, modern and functional web design.
+              Our goal is to build web pages that look great and load fast.
             </p>
+            <!-- خط فاصل ملون -->
             <hr />
             <p>
-              Every detail is meticulously planned and executed with care.
-              Our approach merges aesthetic elegance with functional performance,
-              empowering brands to communicate their message clearly.
+              We focus on clean code, responsive layouts, and easy user experience for all our projects.
             </p>
           </div>
         </div>
@@ -274,40 +181,38 @@
     </section>
     <!-- نهاية قسم من نحن / End About Section -->
 
-    <!-- ================================================================= -->
-    <!-- بداية قسم التواصل / Start Contact Section                         -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 6. بداية قسم التواصل (Contact): البريد وروابط التواصل    -->
+    <!-- ======================================================== -->
     <section class="contact" id="contact">
       <div class="container">
-        <!-- العنوان المائي الموحد -->
+        <!-- عنوان القسم الموحد -->
         <h2 class="special-heading">Contact</h2>
         <p>We are born to create</p>
 
-        <!-- معلومات التواصل وروابط الشبكات الاجتماعية -->
         <div class="info">
           <p class="label">Feel free to drop us a line at:</p>
-          <a href="mailto:leonagency@mail.com?subject=Contact" class="link">
-            leonagency@mail.com
-          </a>
+          <!-- رابط البريد الإلكتروني المباشر -->
+          <a href="mailto:leonagency@mail.com" class="link">leonagency@mail.com</a>
 
           <!-- روابط التواصل الاجتماعي -->
           <div class="social">
             Find Us On Social Networks
-            <i class="fab fa-youtube" title="YouTube" aria-hidden="true"></i>
-            <i class="fab fa-facebook-f" title="Facebook" aria-hidden="true"></i>
-            <i class="fab fa-twitter" title="Twitter" aria-hidden="true"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
           </div>
         </div>
       </div>
     </section>
     <!-- نهاية قسم التواصل / End Contact Section -->
 
-    <!-- ================================================================= -->
-    <!-- بداية تذييل الصفحة / Start Footer Section                         -->
-    <!-- ================================================================= -->
+    <!-- ======================================================== -->
+    <!-- 7. بداية الفوتر (Footer): شريط حفظ حقوق الملكية           -->
+    <!-- ======================================================== -->
     <footer class="footer">
       &copy; 2026 <span>Leon</span> All Right Reserved
     </footer>
-    <!-- نهاية تذييل الصفحة / End Footer -->
+    <!-- نهاية الفوتر / End Footer -->
   </body>
 </html>
