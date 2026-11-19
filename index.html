@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- ترميز الحروف لدعم اللغة العربية والإنجليزية -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- ضبط أبعاد الصفحة لتناسب شاشات الهواتف والأجهزة المختلفة -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leon - Activity 1</title>
 
-    <!-- ملف التنسيق الموحد لإلغاء الفروقات بين المتصفحات (Normalize) -->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- ملف التنسيقات الخارجي -->
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- ملف التنسيقات الرئيسي للمشروع (CSS) -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- مكتبة الأيقونات (Font Awesome) لعرض الأيقونات بشكل مرتب وبسيط -->
+    <!-- مكتبة الأيقونات Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <!-- استدعاء خط Work Sans من خطوط جوجل (Google Fonts) -->
+    <!-- خط Google Fonts: Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,23 +24,21 @@
     />
   </head>
   <body>
-    <!-- ======================================================== -->
-    <!-- 1. بداية الهيدر (Header): يحتوي على الشعار وقائمة الروابط -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 1. الهيدر (Header): الشعار وقائمة التنقل        -->
+    <!-- ============================================== -->
     <header class="header">
       <div class="container">
-        <!-- شعار الموقع نصي وبسيط بدون صور إضافية -->
+        <!-- شعار الموقع نصي -->
         <a href="#" class="logo">Leon<span>.</span></a>
 
-        <!-- قائمة الروابط وأيقونة القائمة -->
+        <!-- قائمة الروابط -->
         <nav class="links">
-          <!-- أيقونة الهامبرغر المكونة من 3 خطوط -->
           <span class="icon">
             <span></span>
             <span></span>
             <span></span>
           </span>
-          <!-- روابط التنقل بين أقسام الصفحة -->
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -55,26 +48,25 @@
         </nav>
       </div>
     </header>
-    <!-- نهاية الهيدر / End Header -->
+    <!-- نهاية الهيدر -->
 
-    <!-- ======================================================== -->
-    <!-- 2. بداية قسم اللاندنج (Landing): يستخدم الصورة المرفقة landing.jpg -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 2. قسم اللاندنج (Landing): مع خلفية landing.jpg -->
+    <!-- ============================================== -->
     <section class="landing" id="landing">
-      <!-- صندوق النص الرئيسي المتمركز في وسط الصفحة -->
       <div class="intro-text">
         <h1>Hello There</h1>
         <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
       </div>
     </section>
-    <!-- نهاية قسم اللاندنج / End Landing Section -->
+    <!-- نهاية قسم اللاندنج -->
 
-    <!-- ======================================================== -->
-    <!-- 3. بداية قسم المميزات (Features): ثلاث بطاقات للمميزات   -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 3. قسم المميزات (Features)                      -->
+    <!-- ============================================== -->
     <section class="features" id="features">
       <div class="container">
-        <!-- الميزة الأولى: مشاركة الفكرة -->
+        <!-- الميزة الأولى -->
         <div class="feat">
           <i class="fas fa-magic fa-3x"></i>
           <h3>Tell Us Your Idea</h3>
@@ -83,7 +75,7 @@
           </p>
         </div>
 
-        <!-- الميزة الثانية: تنفيذ العمل -->
+        <!-- الميزة الثانية -->
         <div class="feat">
           <i class="far fa-gem fa-3x"></i>
           <h3>We Will Do All The Work</h3>
@@ -92,7 +84,7 @@
           </p>
         </div>
 
-        <!-- الميزة الثالثة: الانتشار العالمي -->
+        <!-- الميزة الثالثة -->
         <div class="feat">
           <i class="fas fa-globe-asia fa-3x"></i>
           <h3>Your Product is Worldwide</h3>
@@ -102,20 +94,18 @@
         </div>
       </div>
     </section>
-    <!-- نهاية قسم المميزات / End Features Section -->
+    <!-- نهاية قسم المميزات -->
 
-    <!-- ======================================================== -->
-    <!-- 4. بداية قسم الخدمات (Services): يعرض الخدمات الأساسية   -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 4. قسم الخدمات (Services)                       -->
+    <!-- ============================================== -->
     <section class="services" id="services">
       <div class="container">
-        <!-- عنوان القسم الموحد -->
         <h2 class="special-heading">Services</h2>
         <p>Don't be busy, be productive</p>
 
-        <!-- شبكة الخدمات -->
         <div class="services-content">
-          <!-- الخدمة الأولى: التصميم الجرافيكي -->
+          <!-- خدمة 1 -->
           <div class="srv">
             <i class="fas fa-palette fa-2x"></i>
             <div class="text">
@@ -124,7 +114,7 @@
             </div>
           </div>
 
-          <!-- الخدمة الثانية: تجربة المستخدم والواجهات -->
+          <!-- خدمة 2 -->
           <div class="srv">
             <i class="fab fa-sketch fa-2x"></i>
             <div class="text">
@@ -133,7 +123,7 @@
             </div>
           </div>
 
-          <!-- الخدمة الثالثة: تصميم الويب -->
+          <!-- خدمة 3 -->
           <div class="srv">
             <i class="fas fa-vector-square fa-2x"></i>
             <div class="text">
@@ -142,7 +132,7 @@
             </div>
           </div>
 
-          <!-- الخدمة الرابعة: برمجة وتطوير المواقع -->
+          <!-- خدمة 4 -->
           <div class="srv">
             <i class="fas fa-pencil-ruler fa-2x"></i>
             <div class="text">
@@ -153,14 +143,13 @@
         </div>
       </div>
     </section>
-    <!-- نهاية قسم الخدمات / End Services Section -->
+    <!-- نهاية قسم الخدمات -->
 
-    <!-- ======================================================== -->
-    <!-- 5. بداية قسم من نحن (About): نبذة تعريفية عن الفريق      -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 5. قسم من نحن (About)                           -->
+    <!-- ============================================== -->
     <section class="about" id="about">
       <div class="container">
-        <!-- عنوان القسم الموحد -->
         <h2 class="special-heading">About</h2>
         <p>Less is more work</p>
 
@@ -170,7 +159,6 @@
               We are a creative team passionate about simple, modern and functional web design.
               Our goal is to build web pages that look great and load fast.
             </p>
-            <!-- خط فاصل ملون -->
             <hr />
             <p>
               We focus on clean code, responsive layouts, and easy user experience for all our projects.
@@ -179,23 +167,20 @@
         </div>
       </div>
     </section>
-    <!-- نهاية قسم من نحن / End About Section -->
+    <!-- نهاية قسم من نحن -->
 
-    <!-- ======================================================== -->
-    <!-- 6. بداية قسم التواصل (Contact): البريد وروابط التواصل    -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 6. قسم التواصل (Contact)                        -->
+    <!-- ============================================== -->
     <section class="contact" id="contact">
       <div class="container">
-        <!-- عنوان القسم الموحد -->
         <h2 class="special-heading">Contact</h2>
         <p>We are born to create</p>
 
         <div class="info">
           <p class="label">Feel free to drop us a line at:</p>
-          <!-- رابط البريد الإلكتروني المباشر -->
           <a href="mailto:leonagency@mail.com" class="link">leonagency@mail.com</a>
 
-          <!-- روابط التواصل الاجتماعي -->
           <div class="social">
             Find Us On Social Networks
             <i class="fab fa-youtube"></i>
@@ -205,14 +190,14 @@
         </div>
       </div>
     </section>
-    <!-- نهاية قسم التواصل / End Contact Section -->
+    <!-- نهاية قسم التواصل -->
 
-    <!-- ======================================================== -->
-    <!-- 7. بداية الفوتر (Footer): شريط حفظ حقوق الملكية           -->
-    <!-- ======================================================== -->
+    <!-- ============================================== -->
+    <!-- 7. الفوتر (Footer)                              -->
+    <!-- ============================================== -->
     <footer class="footer">
       &copy; 2026 <span>Leon</span> All Right Reserved
     </footer>
-    <!-- نهاية الفوتر / End Footer -->
+    <!-- نهاية الفوتر -->
   </body>
 </html>

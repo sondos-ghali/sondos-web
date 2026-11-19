@@ -1,20 +1,20 @@
 /* ========================================================
-   المشروع: النشاط الأول - تصميم صفحة ويب بسيطة (Leon)
+   النشاط الأول: تصميم صفحة ويب بسيطة (قالب Leon)
    ملف التنسيقات: style.css
    ======================================================== */
 
 /* --------------------------------------------------------
-   1. المتغيرات العامة للألوان والمسافات (CSS Variables)
+   1. المتغيرات العامة للألوان (CSS Variables)
    -------------------------------------------------------- */
 :root {
-  --main-color: #10cab7;          /* اللون الأساسي (تركوازي) */
-  --secondary-color: #2c4755;     /* اللون الثانوي (كحلي داكن) */
-  --section-background: #f6f6f6;  /* لون خلفية الأقسام المتبادلة */
-  --section-padding: 60px;        /* الهوامش العلوية والسفلية للأقسام */
+  --main-color: #10cab7;          /* اللون التركوازي الرئيسي */
+  --secondary-color: #2c4755;     /* اللون الكحلي للنصوص والعناوين */
+  --section-bg: #f6f6f6;          /* خلفية الأقسام التبادلية */
+  --section-padding: 60px;        /* الهوامش العلوية والسفلية */
 }
 
 /* --------------------------------------------------------
-   2. القواعد العامة والحاوية (Global Rules & Container)
+   2. تصفير الهوامش والقواعد العامة (Reset & Container)
    -------------------------------------------------------- */
 * {
   box-sizing: border-box;
@@ -23,7 +23,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* حركة تمرير ناعمة عند الضغط على الروابط */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
   line-height: 1.6;
 }
 
-/* الحاوية لتوسيط وتحديد عرض المحتوى حسب حجم الشاشة */
+/* الحاوية المتجاوبة لتوسيط المحتوى */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -40,21 +40,18 @@ body {
   margin-right: auto;
 }
 
-/* شاشات الهواتف والأجهزة اللوحية (Small) */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-/* شاشات الحواسيب العادية (Medium) */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 
-/* الشاشات الكبيرة (Large) */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -73,7 +70,6 @@ body {
   margin: 0;
 }
 
-/* النص التوضيحي تحت العنوان مباشرة */
 .special-heading + p {
   margin: -25px 0 0;
   font-size: 18px;
@@ -92,7 +88,7 @@ body {
 }
 
 /* --------------------------------------------------------
-   4. ترويسة الموقع والقائمة (Header & Navigation)
+   4. الهيدر والقائمة (Header & Navigation)
    -------------------------------------------------------- */
 .header {
   padding: 20px 0;
@@ -105,20 +101,17 @@ body {
   align-items: center;
 }
 
-/* تنسيق الشعار النصي البسيط */
 .header .logo {
   font-size: 26px;
   font-weight: 800;
   color: var(--secondary-color);
   text-decoration: none;
-  letter-spacing: -1px;
 }
 
 .header .logo span {
   color: var(--main-color);
 }
 
-/* أيقونة القائمة (Hamburger Menu) */
 .header .links {
   position: relative;
 }
@@ -151,12 +144,10 @@ body {
   margin-bottom: 0;
 }
 
-/* تطويل الخط الأوسط عند وضع الماوس على الأيقونة */
 .header .links:hover .icon span:nth-child(2) {
   width: 100%;
 }
 
-/* قائمة الروابط المنسدلة */
 .header .links ul {
   list-style: none;
   background-color: #f6f6f6;
@@ -170,7 +161,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* سهم القائمة الصغير */
 .header .links ul::before {
   content: "";
   border-width: 10px;
@@ -181,7 +171,6 @@ body {
   top: -20px;
 }
 
-/* إظهار القائمة عند التحويم */
 .header .links:hover ul {
   display: block;
 }
@@ -205,18 +194,17 @@ body {
 
 /* --------------------------------------------------------
    5. قسم اللاندنج (Landing Section)
-   ملاحظة: يستخدم الصورة الوحيدة المرفقة landing.jpg
+   ملاحظة: استخدام الصورة الوحيدة المرفقة landing.jpg مباشرة
    -------------------------------------------------------- */
 .landing {
   height: calc(100vh - 64px);
   min-height: 450px;
-  background-image: url("../landing.jpg"); /* مسار الصورة المرفقة */
+  background-image: url("landing.jpg"); /* مسار الصورة المرفقة في نفس المجلد */
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-/* صندوق الترحيب في المنتصف */
 .landing .intro-text {
   position: absolute;
   left: 50%;
@@ -247,7 +235,7 @@ body {
 .features {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: var(--section-background);
+  background-color: var(--section-bg);
 }
 
 .features .container {
@@ -337,7 +325,7 @@ body {
 .about {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: var(--section-background);
+  background-color: var(--section-bg);
 }
 
 .about .about-content {
@@ -431,7 +419,7 @@ body {
 }
 
 /* --------------------------------------------------------
-   10. تذييل الصفحة (Footer)
+   10. الفوتر (Footer)
    -------------------------------------------------------- */
 .footer {
   background-color: var(--secondary-color);
